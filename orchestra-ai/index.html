@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orchestra AI - Intelligent Cashflow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              body: ['Space Grotesk', 'sans-serif'],
+              accent: ['Manrope', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              // Premium Fintech Palette
+              primary: '#181A20', // Charcoal Base
+              surface: '#25262B', // Card Surface
+              surfaceHighlight: '#2F333C', // Hover state
+              
+              // Secondary (Accent) - Neon Blue/Purple
+              accent: '#7F61E7',
+              accentLight: '#63E1E7',
+              
+              // Highlight (CTA) - Sunset Orange/Pink
+              highlight: '#FB9B5A',
+              highlightPink: '#F75590',
+              
+              // Functional
+              success: '#10b981', 
+              warning: '#f59e0b', 
+              danger: '#ef4444',
+              textMain: '#FFFFFF',
+              textMuted: '#9CA3AF',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s ease-out forwards',
+              'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-soft': 'pulseSoft 3s infinite',
+              'slide-down': 'slideDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideDown: {
+                '0%': { transform: 'translateY(-30px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              pulseSoft: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0.7' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@300;400;500&family=Manrope:wght@400;500;600&family=Outfit:wght@400;500;700&display=swap');
+      
+      body {
+        font-family: 'Space Grotesk', sans-serif; /* Body text */
+        background-color: #181A20;
+        color: #FFFFFF;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter', sans-serif; /* Headers */
+      }
+
+      /* Custom scrollbar for dark theme */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #181A20;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #374151;
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: #4b5563;
+      }
+      
+      /* Glassmorphism utilities */
+      .glass {
+        background: rgba(37, 38, 43, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      
+      .glass-card {
+        background: linear-gradient(145deg, #25262B, #1f2024);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
